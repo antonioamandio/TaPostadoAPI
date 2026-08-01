@@ -121,15 +121,17 @@ npm run dev
 
 ### Fase 2
 
-- Sistema de autenticação
-- JWT
-- Bcrypt
+- CRUD de Usuários
+- CRUD de Posts
+- CRUD de Comentários
+- Regra de negócios
 
 ### Fase 3
 
-- CRUD de Posts
-- CRUD de Comentários
 - Controle de permissões
+- Sistema de autenticação
+- JWT
+- Bcrypt
 
 ### Fase 4
 
