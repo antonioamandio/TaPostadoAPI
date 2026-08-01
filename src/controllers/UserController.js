@@ -46,6 +46,6 @@ export class UserController {
 
         await this.#userService.delete(id)
 
-        return res.status(204)
+        return res.sendStatus(204)
     }
 }
