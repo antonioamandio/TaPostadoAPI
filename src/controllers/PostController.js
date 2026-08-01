@@ -36,7 +36,7 @@ export class PostController {
     async delete(req, res) {
         const { id } = req.params
 
-        const post = await this.#postService.delete(id)
+        await this.#postService.delete(id)
 
         return res.sendStatus(204)
     }
