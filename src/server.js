@@ -1,56 +1,13 @@
 import express from 'express'
+import { router } from './routes/index.js'
 
 const PORT = process.env.PORT || 3333
 const app = express()
 
 app.use(express.json())
-
-// Endpoint to test API connection
-app.get('/health', (req, res) => {
-    try {
-        res.status(200).json({
-            status: 'success',
-            message: 'Server is running',
-        })
-    } catch (error) {
-        res.status(500).json({
-            status: 'error',
-            message: 'Internal server error',
-        })
-    }
-})
+app.use('/', router)
 
 /*
-// Temporary Endpoints Tests
-import {
-    userController,
-    postController,
-    commentController,
-} from './container.js'
-
-{
-    // Temporary User Endpoints
-    app.get('/users', async (req, res) => {
-        return userController.findAll(req, res)
-    })
-
-    app.get('/users/:id', async (req, res) => {
-        return userController.findById(req, res)
-    })
-
-    app.post('/users', async (req, res) => {
-        return userController.create(req, res)
-    })
-
-    app.patch('/users/:id', async (req, res) => {
-        return userController.update(req, res)
-    })
-
-    app.delete('/users/:id', async (req, res) => {
-        return userController.delete(req, res)
-    })
-}
-
 {
     // Temporary Post Endpoints
     app.get('/posts', async (req, res) => {
@@ -95,7 +52,8 @@ import {
     app.delete('/comments/:id', async (req, res) => {
         return commentController.delete(req, res)
     })
-}*/
+}
+*/
 
 app.listen(PORT, () => {
     console.log(
