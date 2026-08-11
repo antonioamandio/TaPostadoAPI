@@ -1,9 +1,5 @@
 import { Router } from 'express'
-import {
-    userController,
-    postController,
-    commentController,
-} from '../container.js'
+import { userRouter } from './UserRoute.js'
 
 const rootRouter = Router()
 
@@ -22,25 +18,6 @@ rootRouter.get('/health', (req, res) => {
     }
 })
 
-// User routes
-rootRouter.get('/users', async (req, res) => userController.findAll(req, res))
-
-rootRouter.get('/users/:id', async (req, res) =>
-    userController.findById(req, res),
-)
-
-rootRouter.get('/users/email/:email', async (req, res) =>
-    userController.findByEmail(req, res),
-)
-
-rootRouter.post('/users', async (req, res) => userController.create(req, res))
-
-rootRouter.patch('/users/:id', async (req, res) =>
-    userController.update(req, res),
-)
-
-rootRouter.delete('/users/:id', async (req, res) =>
-    userController.delete(req, res),
-)
+rootRouter.use('/users', userRouter)
 
 export { rootRouter as router }
