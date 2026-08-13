@@ -1,5 +1,6 @@
 import { Router } from 'express'
 import { userRouter } from './UserRoute.js'
+import { postRouter } from './PostRoute.js'
 
 const rootRouter = Router()
 
@@ -19,5 +20,6 @@ rootRouter.get('/health', (req, res) => {
 })
 
 rootRouter.use('/users', userRouter)
+rootRouter.use('/posts', postRouter)
 
 export { rootRouter as router }
