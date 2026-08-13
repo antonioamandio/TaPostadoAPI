@@ -82,9 +82,9 @@ git --version
 ### Clonar o repositório
 
 ```shell
-git clone https://github.com/antonioamandio/TaPostado.git ta-postado-api
+git clone https://github.com/antonioamandio/TaPostado.git TaPostadoAPI
 
-cd ta-postado-api
+cd TaPostadoAPI
 ```
 
 ### Instalar dependências
