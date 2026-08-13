@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import { userRouter } from './UserRoute.js'
 import { postRouter } from './PostRoute.js'
+import { commentRouter } from './CommentRoute.js'
 
 const rootRouter = Router()
 
@@ -21,5 +22,6 @@ rootRouter.get('/health', (req, res) => {
 
 rootRouter.use('/users', userRouter)
 rootRouter.use('/posts', postRouter)
+rootRouter.use('/comments', commentRouter)
 
 export { rootRouter as router }
