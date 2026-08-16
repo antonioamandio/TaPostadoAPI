@@ -139,17 +139,6 @@ npm run dev
 - Validações
 - Tratamento global de erros
 
-## 🔮 Melhorias Futuras
-
-- Upload de imagens
-- Integração com Cloudinary
-- Full Text Search
-- Cache com Redis
-- Migração para TypeScript
-- Paginação avançada
-- Sistema de likes
-- Categorias e tags
-
 ## 📄 Licença
 
 Este projeto foi desenvolvido para fins educacionais e de estudo de backend moderno.
