@@ -1,37 +1,37 @@
-# Guia para instalar e rodar o postgres
+# Guide to install and run PostgreSQL
 
-## Instale o Postgres (No linux)
+## Install PostgreSQL (on Linux)
 
 ```shell
 sudo apt install postgresql
 ```
 
-Nota:
+Note:
 
-- Se você não usa linux, pesquise em https://www.postgresql.org/ como instalar no seu Sistema operacional
-- Caso prefira e existam, pode usar uma versão LTS mais recentes do Postgres
+- If you are not using Linux, check https://www.postgresql.org/ to find instructions for your operating system
+- If you prefer, and available, you can use a newer LTS version of PostgreSQL
 
-## Acesse o Postgres com user padrão
+## Access PostgreSQL with the default user
 
 ```shell
 sudo -u postgres psql
 ```
 
-## Crie seu user próprio para a API (recomendado)
+## Create your own user for the API (recommended)
 
-Não uses o usuário **postgres** em produção.
+Do not use the **postgres** user in production.
 
 ```sql
 CREATE USER usuario WITH PASSWORD 'senha';
 ```
 
-## Dê permissão ao user para criar bases de dados
+## Grant the user permission to create databases
 
 ```sql
 ALTER USER usuario CREATEDB;
 ```
 
-## Crie a base de dados
+## Create the database
 
 ```sql
 CREATE DATABASE nome_do_banco_de_dados OWNER usuario;
