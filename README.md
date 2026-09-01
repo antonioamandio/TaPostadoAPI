@@ -1,21 +1,21 @@
 # 📝 Tá Postado (Blog API)
 
-Uma API REST profissional para gerenciamento de posts e comentários, desenvolvida com Node.js, Express e PostgreSQL.
+A professional REST API for managing posts and comments, built with Node.js, Express, and PostgreSQL.
 
-## 📖 Sobre o Projeto
+## 📖 About the Project
 
-Um projeto de estudo e prática focado no desenvolvimento de uma API REST moderna, aplicando conceitos fundamentais de backend e boas práticas utilizadas em aplicações reais.
+A study and practice project focused on developing a modern REST API, applying fundamental backend concepts and best practices used in real-world applications.
 
-O desenvolvimento do projeto tem como objetivo explorar e consolidar conhecimentos em:
+The project aims to explore and consolidate knowledge in:
 
-- Arquitetura em camadas
-- Autenticação JWT
-- Segurança de aplicações web
-- Modelagem relacional com PostgreSQL
-- ORM com Prisma
-- Boas práticas de desenvolvimento profissional
+- Layered architecture
+- JWT authentication
+- Web application security
+- Relational modeling with PostgreSQL
+- ORM with Prisma
+- Professional development best practices
 
-## 🛠️ Stack Tecnológica
+## 🛠️ Tech Stack
 
 ### Backend
 
@@ -25,16 +25,16 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 - PostgreSQL
 - Prisma ORM
 
-### Segurança
+### Security
 
 - JWT (JSON Web Token)
 - Bcrypt
 
-## 🗄️ Modelagem do Banco de Dados
+## 🗄️ Database Modeling
 
 ### Users
 
-| Campo    | Tipo   |
+| Field    | Type   |
 | -------- | ------ |
 | id       | UUID   |
 | name     | String |
@@ -43,7 +43,7 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 
 ### Posts
 
-| Campo     | Tipo   |
+| Field     | Type   |
 | --------- | ------ |
 | id        | UUID   |
 | title     | String |
@@ -52,25 +52,25 @@ O desenvolvimento do projeto tem como objetivo explorar e consolidar conheciment
 
 ### Comments
 
-| Campo     | Tipo |
+| Field     | Type |
 | --------- | ---- |
 | id        | UUID |
 | content   | Text |
 | post_id   | UUID |
 | author_id | UUID |
 
-## ⚙️ Instalação
+## ⚙️ Installation
 
-### 📋 Pré-requisitos
+### 📋 Prerequisites
 
-Antes de executar o projeto, certifique-se de ter instalado:
+Before running the project, make sure you have installed:
 
-- [Node.js 24 LTS ou superior](https://nodejs.org/)
-- [PostgreSQL 17 ou superior](https://www.postgresql.org/)
+- [Node.js 24 LTS or higher](https://nodejs.org/)
+- [PostgreSQL 17 or higher](https://www.postgresql.org/)
 - [Git](https://git-scm.com/)
-- [npm (instalado juntamente com o Node.js)](https://www.npmjs.com/)
+- [npm (installed with Node.js)](https://www.npmjs.com/)
 
-Verificando as instalações:
+Checking the installations:
 
 ```shell
 node --version
@@ -79,7 +79,7 @@ psql --version
 git --version
 ```
 
-### Clonar o repositório
+### Clone the repository
 
 ```shell
 git clone https://github.com/antonioamandio/TaPostado.git TaPostadoAPI
@@ -87,15 +87,15 @@ git clone https://github.com/antonioamandio/TaPostado.git TaPostadoAPI
 cd TaPostadoAPI
 ```
 
-### Instalar dependências
+### Install dependencies
 
 ```shell
 npm install
 ```
 
-### Configurar variáveis de ambiente
+### Configure environment variables
 
-Crie um arquivo `.env`:
+Create a `.env` file:
 
 ```env
 PORT=3333
@@ -104,7 +104,7 @@ DATABASE_URL=postgres://[user]:[password]@[host]:5432/[database]
 JWT_SECRET=your_secret_key
 ```
 
-### Iniciar o servidor
+### Start the server
 
 ```bash
 npm run dev
@@ -112,33 +112,33 @@ npm run dev
 
 ## 📈 Roadmap
 
-### Fase 1
+### Phase 1
 
-- Configuração inicial
+- Initial setup
 - PostgreSQL
 - Prisma ORM
 - Migrations
 
-### Fase 2
+### Phase 2
 
-- CRUD de Usuários
-- CRUD de Posts
-- CRUD de Comentários
-- Regra de negócios
+- User CRUD
+- Post CRUD
+- Comment CRUD
+- Business rules
 
-### Fase 3
+### Phase 3
 
-- Controle de permissões
-- Sistema de autenticação
+- Permission control
+- Authentication system
 - JWT
 - Bcrypt
 
-### Fase 4
+### Phase 4
 
-- Testes automatizados
-- Validações
-- Tratamento global de erros
+- Automated tests
+- Validations
+- Global error handling
 
-## 📄 Licença
+## 📄 License
 
-Este projeto foi desenvolvido para fins educacionais e de estudo de backend moderno.
+This project was developed for educational purposes and for studying modern backend development.
