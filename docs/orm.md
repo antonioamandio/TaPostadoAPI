@@ -1,31 +1,31 @@
-# Guia de instalação do ORM Prisma
+# Prisma ORM installation guide
 
-## Instale o Prisma
+## Install Prisma
 
 ```shell
 npm install prisma --save-dev
 ```
 
-## Inicialize o Prisma usando o Postgres
+## Initialize Prisma using PostgreSQL
 
 ```shell
 npx prisma init --datasource-provider postgresql
 ```
 
-## Configure o arquivo .env
+## Configure the .env file
 
 ```.env
 DATABASE_URL=postgres://user:password@host:5432/db
 ```
 
-## Instale o cliente do Prisma (Com o driver do Postgres)
+## Install the Prisma client (with the PostgreSQL driver)
 
 ```shell
 npm install @prisma/client
 npm install @prisma/adapter-pg
 ```
 
-## Configure o arquivo schema.prisma na pasta prisma/
+## Configure the schema.prisma file in the prisma/ folder
 
 ```prisma
 //prisma/schema.prisma
@@ -39,7 +39,7 @@ datasource db {
 }
 ```
 
-## Configure o objecto de conexão com o banco de dados
+## Configure the database connection object
 
 ```js
 // src/config/database.js
