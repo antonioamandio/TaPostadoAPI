@@ -9,12 +9,20 @@ export class CommentService {
         return this.#commentRepository.create(data)
     }
 
-    async findAll() {
+    async findAll(postId) {
+        if (postId) {
+            return this.#commentRepository.findByPost(postId)
+        }
+
         return this.#commentRepository.findAll()
     }
 
     async findById(id) {
         return this.#commentRepository.findById(id)
+    }
+
+    async findByPost(postId) {
+        return this.#commentRepository.findByPost(postId)
     }
 
     async update(id, data) {

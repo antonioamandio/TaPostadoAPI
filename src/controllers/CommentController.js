@@ -12,7 +12,9 @@ export class CommentController {
     }
 
     async findAll(req, res) {
-        const comments = await this.#commentService.findAll()
+        const { postId } = req.query
+
+        const comments = await this.#commentService.findAll(postId)
 
         return res.status(200).json(comments)
     }
@@ -23,6 +25,12 @@ export class CommentController {
         const comment = await this.#commentService.findById(id)
 
         return res.status(200).json(comment)
+    }
+
+    async findByPost(req, res) {
+        const { postId } = req.query
+
+        return res.status(200).json(comments)
     }
 
     async update(req, res) {

@@ -19,6 +19,14 @@ export class CommentRepository {
         })
     }
 
+    async findByPost(postId) {
+        return this.#prisma.comment.findMany({
+            where: {
+                postId,
+            },
+        })
+    }
+
     async update(id, data) {
         return this.#prisma.comment.update({
             where: { id },
