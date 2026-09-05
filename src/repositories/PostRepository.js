@@ -13,6 +13,14 @@ export class PostRepository {
         return this.#prisma.post.findMany()
     }
 
+    async findByAuthor(authorId) {
+        return this.#prisma.post.findMany({
+            where: {
+                authorId,
+            },
+        })
+    }
+
     async findById(id) {
         return this.#prisma.post.findUnique({
             where: { id },

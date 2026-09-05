@@ -9,7 +9,11 @@ export class PostService {
         return this.#postRepository.create(data)
     }
 
-    async findAll() {
+    async findAll(authorId) {
+        if (authorId) {
+            return this.#postRepository.findByAuthor(authorId)
+        }
+
         return this.#postRepository.findAll()
     }
 

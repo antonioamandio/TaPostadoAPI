@@ -12,7 +12,9 @@ export class PostController {
     }
 
     async findAll(req, res) {
-        const posts = await this.#postService.findAll()
+        const { authorId } = req.query
+
+        const posts = await this.#postService.findAll(authorId)
 
         return res.status(200).json(posts)
     }
