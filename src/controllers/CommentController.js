@@ -30,6 +30,8 @@ export class CommentController {
     async findByPost(req, res) {
         const { postId } = req.query
 
+        const comments = await this.#commentService.findByPost(postId)
+
         return res.status(200).json(comments)
     }
 
